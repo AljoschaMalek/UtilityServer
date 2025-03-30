@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}Utility Server{% endblock %}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+    </style>
+    {% block head %}{% endblock %}
+</head>
+<body>
+    <h1>Utility Server</h1>
+    <nav>
+        <a href="/">Home</a> |
+        <a href="/links">Link Shortener</a>
+        <!-- Add more services here as they are implemented -->
+    </nav>
+    <hr>
+    {% block content %}
+    <div>
+        <h2>Available Utilities</h2>
+        <ul>
+            <li><a href="/links">Link Shortener</a></li>
+            <!-- More services will be listed here -->
+        </ul>
+    </div>
+    {% endblock %}
+</body>
+</html>

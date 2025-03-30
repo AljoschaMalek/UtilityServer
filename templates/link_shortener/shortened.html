@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}URL Shortened{% endblock %}
+
+{% block content %}
+<div>
+    <h2>URL Shortened</h2>
+    <p>Your shortened URL is:</p>
+    <div style="background-color: #f0f0f0; padding: 10px; border-radius: 4px;">
+        <a href="{{ short_url }}">{{ short_url }}</a>
+    </div>
+    <p><button onclick="navigator.clipboard.writeText('{{ short_url }}').then(() => alert('Copied!'))">Copy to clipboard</button></p>
+    <p><a href="/links">Shorten another URL</a></p>
+</div>
+{% endblock %}
